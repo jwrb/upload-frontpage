@@ -1,0 +1,70 @@
+.onoffswitch {
+    position: relative; width: 50px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #F5F5F5; border-radius: 50px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: #55B4AE; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: #707070; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 26px; margin: 4px;
+    background: #FFFFFF;
+    border: 2px solid #F5F5F5; border-radius: 50px;
+    position: absolute; top: 0; bottom: 0; right: 16px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+// Extra Classes for Styling Buttons
+
+
+.btn-fb {
+  .button-variant(@btn-fb-color; @btn-fb-bg; @btn-fb-border);
+}
+
+.btn-tw {
+  .button-variant(@btn-tw-color; @btn-tw-bg; @btn-tw-border);
+}
+
+.btn-lowercase {
+    text-transform: capitalize !important;
+}
+
+.btn-no-border {
+    border-radius: 0;
+    border: none;
+}
+
+.btn-tall {
+    height: 45px;   
+}
