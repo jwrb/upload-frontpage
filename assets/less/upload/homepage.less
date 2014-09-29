@@ -6,7 +6,18 @@ body {
 .hundred {
 	height: 100% !important;
 }
+
+
+
 .section {
+
+	&.shown {
+		opacity: 1;
+	}
+
+	&.not-shown {
+		opacity: 0;
+	}
 
 	.splash-flex {
 		display: -webkit-box;
@@ -21,7 +32,7 @@ body {
 		-ms-flex-align: center;
 		align-items: center;
 
-		background: url('../../assets/images/backgrounds/home/top-splash.png') fixed no-repeat;
+		background: url('../../assets/images/backgrounds/home/top-splash.png') #000 fixed no-repeat;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
